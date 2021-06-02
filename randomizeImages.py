@@ -3,11 +3,11 @@ from random import shuffle
 import os
 
 emotions = ["angry", "disgust", "fear", "happy", "neutral", "sad", "surprise"]
-n = 436
+n = 1000
 
 
 for emotion in emotions:
-    files = glob(f"train/{emotion}/*.jpg")
+    files = glob(f"train/{emotion}/*.jpg") + glob(f"test/{emotion}/*.jpg")
     shuffle(files)
     os.chdir("data")
     os.mkdir(emotion)
