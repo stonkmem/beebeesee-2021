@@ -1,4 +1,4 @@
-# Happy Friends uwu
+# Face-recognition AI for Communicating Emotions (FACE) uwu
 
 ## Clone this repository into a new directory using
 
