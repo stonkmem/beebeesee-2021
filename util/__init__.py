@@ -2,19 +2,32 @@ import tkinter as tk
 import cv2
 from PIL import ImageTk, Image
 
+
 class Webcam(tk.Frame):
     def __init__(self, master):
-        tk.Frame.__init__(self, master, bg='white')
-        self.root = tk.Frame(master, bg='white')
+        tk.Frame.__init__(self, master, bg="white")
+        self.root = tk.Frame(master, bg="white")
         width, height = 800, 600
         self.cap = cv2.VideoCapture(0)
         self.cap.set(cv2.CAP_PROP_FRAME_WIDTH, width)
         self.cap.set(cv2.CAP_PROP_FRAME_HEIGHT, height)
-        label = tk.Label(self.root, text='Webcam Footage', fg="red", font=('Trebuchet MS', 15), bg='white')
+        label = tk.Label(
+            self.root,
+            text="Webcam Footage",
+            fg="red",
+            font=("Trebuchet MS", 15),
+            bg="white",
+        )
         label.pack(side=tk.TOP)
         self.lmain = tk.Label(self.root)
         self.lmain.pack(fill=tk.BOTH, expand=1, side=tk.TOP)
-        tk.Button(self.root, text='Play', bg='#19A7A7', fg='white', command=self.toggle_show).pack(side=tk.BOTTOM)
+        tk.Button(
+            self.root,
+            text="Play",
+            bg="#19A7A7",
+            fg="white",
+            command=self.toggle_show,
+        ).pack(side=tk.BOTTOM)
         self.boolean = False
 
         _, frame = self.cap.read()

@@ -1,8 +1,9 @@
 [tool.poetry]
-authors = [""]
+authors = []
 description = "Face-recognition AI for Communicating Emotions (FACE)"
-name = "bbcs2021-face"
+name = "beebeesee"
 version = "0.1.0"
+license = "MIT"
 readme = "README.md"
 
 [tool.poetry.dependencies]
@@ -20,6 +21,23 @@ cvlib = "^0.2"
 tensorflow = "^2.5"
 cmake = "^3.20"
 dlib = "^19.8.1"
+
+[tool.poetry.dev-dependencies]
+# black = "^21.0" # Commented out because poetry is utterly mindfucked
+
+[tool.black]
+line-length = 78
+include = ".pyi?$"
+exclude = """
+.eggs/
+.git/
+build
+dist
+"""
+
+[tool.poetry.scripts]
+bbcs-debug = "beebeesee.cli:debug"
+bbcs-deploy = "beebeesee.cli:deploy"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
