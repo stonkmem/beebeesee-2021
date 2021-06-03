@@ -1,7 +1,5 @@
 # FACE
 
-![logo](../assets/logo.png?raw=true)
-
 - **F**ace-recognition
 - **A**I for
 - **C**ommunicating
