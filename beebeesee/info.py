@@ -1,7 +1,9 @@
 from pathlib import Path
 
 PROJECT_NAME: str = "beebeesee"
-ROOT_DIR = Path(__file__).parents[1].resolve()
+SERVER_DIR = Path(__file__).parent.resolve()
+UPLOAD_DIR = SERVER_DIR / "uploaded"
+ROOT_DIR = SERVER_DIR.parent
 STATIC_DIR = ROOT_DIR / "static"
 VIEWS_DIR = ROOT_DIR / "views"
 DEFAULT_HOST: str = "0.0.0.0"
