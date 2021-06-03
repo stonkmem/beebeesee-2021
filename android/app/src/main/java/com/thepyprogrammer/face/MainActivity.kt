@@ -13,6 +13,7 @@ import com.chaquo.face.R
 import com.chaquo.python.PyException
 import com.chaquo.python.Python
 import com.chaquo.python.android.AndroidPlatform
+import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -25,22 +26,14 @@ class MainActivity : AppCompatActivity() {
         val py = Python.getInstance()
         val module = py.getModule("plot")
 
-        findViewById<Button>(R.id.button).setOnClickListener {
-            try {
-                val bytes = module.callAttr("plot",
-                                            findViewById<EditText>(R.id.etX).text.toString(),
-                                            findViewById<EditText>(R.id.etY).text.toString())
+        val bytes = module.callAttr("plot", "0", "0")
                     .toJava(ByteArray::class.java)
-                val bitmap = BitmapFactory.decodeByteArray(bytes, 0, bytes.size)
-                findViewById<ImageView>(R.id.imageView).setImageBitmap(bitmap)
+        val bitmap = BitmapFactory.decodeByteArray(bytes, 0, bytes.size)
+        imageView.setImageBitmap(bitmap)
 
-                currentFocus?.let {
-                    (getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager)
-                        .hideSoftInputFromWindow(it.windowToken, 0)
-                }
-            } catch (e: PyException) {
-                Toast.makeText(this, e.message, Toast.LENGTH_LONG).show()
-            }
+        currentFocus?.let {
+            (getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager)
+                .hideSoftInputFromWindow(it.windowToken, 0)
         }
     }
 }
