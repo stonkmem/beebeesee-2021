@@ -68,6 +68,7 @@ class SentimentalWebcam(Frame):
         self.playImg()
 
         if not master:
+            self.master.title("FACE - Your Own Sentimental Webcam")
             self.pack(fill=tk.BOTH, expand=1)
             self.master.mainloop()
 
@@ -79,6 +80,8 @@ class SentimentalWebcam(Frame):
         if self.dt == 500:
             self.img, frame = frame, modifyImg(frame, self.img)
             self.dt = 0
+        else:
+            frame = modifyImg(frame, self.img)
 
         frame = cv2.cvtColor(frame, cv2.COLOR_BGR2RGBA)
         frame = cv2.resize(frame, (800, 600))
