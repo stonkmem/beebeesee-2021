@@ -1,6 +1,6 @@
 # FACE
 
-![logo][https://raw.githubusercontent.com/RenoirTan/beebeesee-2021/assets/logo.png]
+![logo](../assets/logo.png?raw=true)
 
 - **F**ace-recognition
 - **A**I for
