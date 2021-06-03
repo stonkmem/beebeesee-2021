@@ -7,3 +7,6 @@ VIEWS_DIR = ROOT_DIR / "views"
 DEFAULT_HOST: str = "0.0.0.0"
 DEFAULT_PORT: int = 5000
 DEFAULT_DEBUG: bool = True
+
+DOMAIN_NAME: str = "renoirtan.cf"
+PRE_PATH: str = "http://{0}/".format(DOMAIN_NAME)
