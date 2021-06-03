@@ -7,10 +7,9 @@
 - **C**ommunicating
 - **E**motions
 
-This is an AI Project for detecting emotions based on one's FACE.
-Let's FACE it, sometimes knowing others' feelings can greatly improve communication.
-You will never have to FACE the problem of unsincere feedback again!
-
+This is an AI Project for detecting emotions based on one's **FACE**.
+This application is an indispensable tool for movie-makers *FACE*ing problems with getting honest feedback about thier productions.
+With **FACE**, they will be able to view thier audience's audiences reactions and will get essential information to improve thier movie production, using deep learning!
 ## Clone with
 
 ```bash
@@ -19,7 +18,7 @@ git clone git@github.com:RenoirTan/beebeesee-2021.git
 
 ## Setup using
 
-**NOTE: Dlib uses alot of resources for compilation and might crash your computer.**
+**NOTE: Dlib uses a lot of resources for compilation and might crash your computer.**
 
 ### Unix (SU)
 
@@ -48,7 +47,7 @@ bash ./debug.sh
 ```
 
 ## Trained Model Details
- - CNN
+ - Convolutional Neural Network
  - 20 epochs with 448 steps per epoch
  - training accuracy: 0.8702
  - validation accuracy: 0.6283
