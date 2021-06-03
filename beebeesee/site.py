@@ -6,4 +6,4 @@ site = Blueprint("site", PROJECT_NAME, template_folder=VIEWS_DIR)
 
 @site.route("/", methods=["GET"])
 def root():
-    return render_template("base.html")
+    return render_template("root.html")
