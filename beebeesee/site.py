@@ -15,3 +15,12 @@ def _model_model():
     MODEL_PATH = STATIC_DIR / "model" / "model.json"
     model = json.load(MODEL_PATH.open("r"))
     return model
+
+@face.route("/<lost>")
+def lostpage(lost):
+	return """
+<script>
+alert("Are you sure this page really exists? We can't seem to find it.")
+</script>
+<a href="/">Visit our app!</a>
+"""
