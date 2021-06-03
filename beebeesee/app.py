@@ -12,6 +12,7 @@ from .info import (
 from .site import site
 
 app = Flask(PROJECT_NAME, static_url_path="", static_folder=STATIC_DIR)
+app.secret_key = "48a3bced7be3474d9e731fe9dacbfc2a"
 app.register_blueprint(site)
 
 
