@@ -13,7 +13,7 @@ This application will be an indispensable tool for movie-makers *FACE*ing proble
 With **FACE**, they will be able to view thier audience's audiences reactions and will get essential information to improve thier movie production, using deep learning!
 
 ## But How does it work?
-We are using a Tensorflow 
+We are using a Tensorflow Convolutional Neural Network with labels for the emotions.
 
 ## Trained Model Details
  - Convolutional Neural Network
