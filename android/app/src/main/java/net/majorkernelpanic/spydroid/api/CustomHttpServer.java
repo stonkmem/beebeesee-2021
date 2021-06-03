@@ -38,18 +38,6 @@ import net.majorkernelpanic.spydroid.SpydroidApplication;
 import net.majorkernelpanic.streaming.Session;
 import net.majorkernelpanic.streaming.rtsp.UriParser;
 
-import org.apache.http.HttpEntityEnclosingRequest;
-import org.apache.http.HttpException;
-import org.apache.http.HttpRequest;
-import org.apache.http.HttpResponse;
-import org.apache.http.HttpStatus;
-import org.apache.http.NameValuePair;
-import org.apache.http.client.utils.URLEncodedUtils;
-import org.apache.http.entity.ContentProducer;
-import org.apache.http.entity.EntityTemplate;
-import org.apache.http.protocol.HttpContext;
-import org.apache.http.protocol.HttpRequestHandler;
-import org.apache.http.util.EntityUtils;
 
 import android.util.Log;
 

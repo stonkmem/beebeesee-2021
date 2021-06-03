@@ -23,7 +23,6 @@ package net.majorkernelpanic.spydroid.ui;
 import java.util.Locale;
 
 import net.majorkernelpanic.http.TinyHttpServer;
-import net.majorkernelpanic.spydroid.R;
 import net.majorkernelpanic.spydroid.SpydroidApplication;
 import net.majorkernelpanic.spydroid.Utilities;
 import net.majorkernelpanic.spydroid.api.CustomHttpServer;
