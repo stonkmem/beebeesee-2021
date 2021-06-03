@@ -7,9 +7,22 @@
 - **C**ommunicating
 - **E**motions
 
-This is an AI Project for detecting emotions based on one's **FACE**.
-This application is an indispensable tool for movie-makers *FACE*ing problems with getting honest feedback about thier productions.
+This is an AI Project for visual sentiment analysis based on audiences' **Face**.
+
+This application will be an indispensable tool for movie-makers *FACE*ing problems with getting honest feedback about thier productions through text.
 With **FACE**, they will be able to view thier audience's audiences reactions and will get essential information to improve thier movie production, using deep learning!
+
+## But How does it work?
+We are using a Tensorflow 
+
+## Trained Model Details
+ - Convolutional Neural Network
+ - 20 epochs with 448 steps per epoch
+ - training accuracy: 0.8702
+ - validation accuracy: 0.6283
+
+
+## Technical Specifics
 ## Clone with
 
 ```bash
@@ -45,9 +58,3 @@ bash ./debug.sh
 ```shell
 ./debug.cmd
 ```
-
-## Trained Model Details
- - Convolutional Neural Network
- - 20 epochs with 448 steps per epoch
- - training accuracy: 0.8702
- - validation accuracy: 0.6283
