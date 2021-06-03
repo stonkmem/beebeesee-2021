@@ -16,11 +16,11 @@ def _model_model():
     model = json.load(MODEL_PATH.open("r"))
     return model
 
-@face.route("/<lost>")
+@face.route("/<lost>/")
 def lostpage(lost):
-	return """
+    return """
 <script>
 alert("Are you sure this page really exists? We can't seem to find it.")
-</script>
-<a href="/">Visit our app!</a>
+</script><h1>
+<a href="/">Visit our app!</a></h1>
 """
