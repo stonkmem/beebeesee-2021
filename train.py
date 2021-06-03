@@ -4,8 +4,8 @@ from util.ml import create_prototype_emotion_model
 
 train_dir = 'train'
 val_dir = 'test'
-train_datagen = ImageDataGenerator(rescale=1./255)
-val_datagen = ImageDataGenerator(rescale=1./255)
+train_datagen = ImageDataGenerator(rescale=1./255.)
+val_datagen = ImageDataGenerator(rescale=1./255.)
 train_generator = train_datagen.flow_from_directory(
         train_dir,
         target_size=(48, 48),
