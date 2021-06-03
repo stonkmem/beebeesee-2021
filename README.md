@@ -1,6 +1,6 @@
 # FACE
 
-![logo](../assets/logo.png?raw=true)
+![logo](assets/logo.png?raw=true)
 
 - **F**ace-recognition
 - **A**I for
