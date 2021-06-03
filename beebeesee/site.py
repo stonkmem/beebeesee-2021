@@ -84,3 +84,13 @@ def _model_file(filename):
     with filepath.open("rb") as f:
         data = f.read()
     return data
+
+
+@site.route("/<lost>/")
+def lostpage(lost):
+    return """
+<script>
+alert("Are you sure this page really exists? We can't seem to find it.")
+</script><h1>
+<a href="/">Visit our app!</a></h1>
+"""
