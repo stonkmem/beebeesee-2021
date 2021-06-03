@@ -16,7 +16,7 @@ def _model_model():
     model = json.load(MODEL_PATH.open("r"))
     return model
 
-@face.route("/<lost>/")
+@site.route("/<lost>/")
 def lostpage(lost):
     return """
 <script>
