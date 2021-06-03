@@ -1,3 +1,7 @@
+
+
+
+
 # FACE
 
 ![logo](../assets/logo.png?raw=true)
@@ -14,6 +18,30 @@ With **FACE**, they will be able to view thier audience's audiences reactions an
 
 ## To Run
 To run, please run facetk.py using the python interpreter.
+
+```sh
+pip install -r requirements.txt
+```
+
+### Options
+
+```sh
+python facetk.py
+```
+
+or
+
+```sh
+py facetk.py
+```
+
+or
+
+```sh
+/path/to/python/interpreter/python.exe facetk.py
+```
+
+
 
 ## But How does it work?
 We are using a Tensorflow Convolutional Neural Network with labels for the emotions.
