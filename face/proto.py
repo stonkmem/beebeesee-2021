@@ -7,7 +7,6 @@ emotion_model.load_weights('../models/trained_model.h5')
 
 
 cv2.ocl.setUseOpenCL(False)
-emotion_dict = {0: "Angry", 1: "Disgusted", 2: "Fearful", 3: "Happy", 4: "Neutral", 5: "Sad", 6: "Surprised"}
 cap = cv2.VideoCapture(0)
 while True:
     ret, frame = cap.read()
@@ -27,7 +26,7 @@ while True:
             (x+20, y-60), cv2.FONT_HERSHEY_SIMPLEX, 1,
             (255, 255, 255), 2, cv2.LINE_AA
         )
-    cv2.imshow('Video', cv2.resize(frame, (1200, 860), interpolation=cv2.INTER_CUBIC))
+    cv2.imshow('Video', cv2.resize(frame, (800, 860), interpolation=cv2.INTER_CUBIC))
     if cv2.waitKey(1) & 0xFF == ord('q'):
         cap.release()
         cv2.destroyAllWindows()
