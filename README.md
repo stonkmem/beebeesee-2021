@@ -1,12 +1,15 @@
 # FACE
 
+![logo][../assets/logo.png?raw=true]
+
 - **F**ace-recognition
 - **A**I for
 - **C**ommunicating
 - **E**motions
 
-This is an AI Project for detecting emotions based on one's facial expression.
-As sometimes, even we humans can miss out other's emotions when talking.
+This is an AI Project for detecting emotions based on one's FACE.
+Let's FACE it, sometimes knowing others' feelings can greatly improve communication.
+You will never have to FACE the problem of unsincere feedback again!
 
 ## Clone with
 
