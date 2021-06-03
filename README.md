@@ -43,3 +43,9 @@ bash ./debug.sh
 ```shell
 ./debug.cmd
 ```
+
+## Trained Model Details
+ - CNN
+ - 20 epochs with 448 steps per epoch
+ - training accuracy: 0.8702
+ - validation accuracy: 0.6283
