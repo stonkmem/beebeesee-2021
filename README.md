@@ -12,6 +12,8 @@ This is an AI Project for visual sentiment analysis based on audiences' **Face**
 This application will be an indispensable tool for movie-makers *FACE*ing problems with getting honest feedback about thier productions through text.
 With **FACE**, they will be able to view thier audience's reactions and will get essential information to improve thier movie production, using deep learning!
 
+For our report, look [here](https://github.com/ThePyProgrammer/AIWinpetition3_7_FACE/blob/main/FACE%20-%20Report%20for%20BuildingBloCS%202021.pdf).
+
 ## Our Idea
 The theme we have chosen is “Inspired by Hollywood”. This project aims to enable our program to detect the target's feelings, and gauge their satisfaction when watching a film. This will allow the film directors to know how the audience is taking the film. For example, when watching a film, a director can quickly know the audience's engagement and feeling. This allows him to be able to see how his or her film is in the eyes of the audience. With this program, through facial expressions, the director can quickly receive feedback, allowing for more accurate and quick feedback on the emotional rollercoaster that the audience is in. With our Face-recognition AI for Communicating Emotions (FACE), you will never have to FACE this problem again!
 
