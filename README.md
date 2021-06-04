@@ -16,14 +16,18 @@ This is an AI Project for visual sentiment analysis based on audiences' **Face**
 This application will be an indispensable tool for movie-makers *FACE*ing problems with getting honest feedback about thier productions through text.
 With **FACE**, they will be able to view thier audience's audiences reactions and will get essential information to improve thier movie production, using deep learning!
 
-## To Run
+
+## The Tkinter FACE Application (Desktop Client)
+A Tkinter-based Facial Recognition based Sentimental Analysis Application that aims to predict emotions of users by accessing the Webcam using a Keras Model. Made as part of Building Blocs SG 2021.
+
+### To Run
 To run, please run `face-tkinter/main.py` using the python interpreter.
 
 ```sh
 pip install -r requirements.txt
 ```
 
-### Options
+#### Options
 
 ```sh
 python facetk/main.py
@@ -46,7 +50,7 @@ or
 ## But How does it work?
 We are using a Tensorflow Convolutional Neural Network with labels for the emotions.
 
-## Trained Model Details
+### Trained Model Details
  - Convolutional Neural Network
  - 20 epochs with 448 steps per epoch
  - training accuracy: 0.8702
@@ -54,31 +58,31 @@ We are using a Tensorflow Convolutional Neural Network with labels for the emoti
 
 
 ## Technical Specifics
-## Clone with
+### Clone with
 
 ```bash
 git clone git@github.com:RenoirTan/beebeesee-2021.git
 ```
 
-## Setup using
+### Setup using
 
 **NOTE: Dlib uses a lot of resources for compilation and might crash your computer.**
 
-### Unix (SU)
+#### Unix (SU)
 
 ```bash
 bash ./setup.sh
 ```
 
-### Windows (SU)
+#### Windows (SU)
 
 ```shell
 ./setup.cmd
 ```
 
-## Running the website in debug mode
+### Running the website in debug mode
 
-### Unix (RWDM)
+#### Unix (RWDM)
 
 ```bash
 bash ./debug.sh
