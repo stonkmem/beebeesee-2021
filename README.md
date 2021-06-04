@@ -26,19 +26,19 @@ pip install -r requirements.txt
 ### Options
 
 ```sh
-python face-tkinter/main.py
+python facetk/main.py
 ```
 
 or
 
 ```sh
-py face-tkinter/main.py
+py facetk/main.py
 ```
 
 or
 
 ```sh
-/path/to/python/interpreter/python.exe face-tkinter/main.py
+/path/to/python/interpreter/python.exe facetk/main.py
 ```
 
 
