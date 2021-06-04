@@ -1,4 +1,4 @@
-from .facetk import SentimentalWebcam
+from facetk import SentimentalWebcam
 
 def main():
     SentimentalWebcam()
