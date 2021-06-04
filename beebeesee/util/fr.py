@@ -80,7 +80,7 @@ def convert_face(face: Image) -> Image:
             (48, 48), pil.Image.ANTIALIAS
         )
     )
-    return np.array(np.array(cheese))
+    return np.reshape(cheese, (1, 48, 48, 1))
 
 
 def classify(image: Image, location: CropData) -> np.ndarray:
@@ -90,11 +90,11 @@ def classify(image: Image, location: CropData) -> np.ndarray:
     face: Image = crop(image, location)
     #print(f"[beebeesee.util.fr.classify] face_before: {face}")
     face = convert_face(face)
-    cv2.imshow("after intense editing", face)
-    cv2.waitKey(0)
-    cv2.destroyAllWindows()
-    print(f"[beebeesee.util.fr.classify] face_after: {face}")
-    print(f"[beebeesee.util.fr.classify] face.ndim: {face.ndim}")
+    #cv2.imshow("after intense editing", face)
+    #cv2.waitKey(0)
+    #cv2.destroyAllWindows()
+    #print(f"[beebeesee.util.fr.classify] face_after: {face}")
+    #print(f"[beebeesee.util.fr.classify] face.ndim: {face.ndim}")
     return emotion_model.predict(face)
 
 
