@@ -4,6 +4,7 @@ from typing import *
 import cv2
 from flask import Blueprint, render_template, request, flash, redirect, url_for
 from werkzeug.utils import secure_filename
+from .brain import predict
 from .info import PRE_PATH, PROJECT_NAME, STATIC_DIR, VIEWS_DIR, UPLOAD_DIR
 
 site = Blueprint("site", PROJECT_NAME, template_folder=VIEWS_DIR)
@@ -57,7 +58,9 @@ def analyzer():
         if file and file_check(file.filename):
             print("file and file_check(file.filename)")
             filename = secure_filename(file.filename)
-            file.save(UPLOAD_DIR / filename)
+            end_path = UPLOAD_DIR / filename
+            file.save(end_path)
+            predict(end_path)
             return redirect(url_for("site.success"))
         else:
             return redirect(request.url)
