@@ -8,4 +8,4 @@ from keras.layers import Dense, Dropout, Flatten
 from keras.layers import Conv2D
 from keras.layers import MaxPooling2D
 from .info import MODELS_DIR
-from .util.fr import predict
+from .util.fr import predict, open_image

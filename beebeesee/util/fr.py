@@ -112,10 +112,12 @@ def classify_multiple(
     Classify all faces found in an image.
     """
     emotions: List[str] = []
-    for location in locations:
+    for index, location in enumerate(locations):
+        print(index)
         classification: np.ndarray = classify(image, location)
         emotion: str = resolve_classification(classification)
         emotions.append(emotion)
+        print(emotion)
     return emotions
 
 
@@ -134,12 +136,12 @@ def _show_image(image: Image) -> None:
     cv2.destroyAllWindows()
 
 
-def predict(filepath: Path) -> str:
+def predict(image: Image) -> str:
     """
     Get the general emotion of the audience from an image of them located
     at `filepath`.
     """
-    image = open_image(filepath)
+    #image = open_image(filepath)
     #print(f"OPEN_IMAGE: {image}")
     image = preprocess(image)
     #print(f"PREPROCESS: {image}")

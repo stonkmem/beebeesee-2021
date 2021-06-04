@@ -1,11 +1,20 @@
+import os
 import json
 from pathlib import Path
 from typing import *
 import cv2
-from flask import Blueprint, render_template, request, flash, redirect, url_for
+from flask import (
+    Blueprint,
+    render_template,
+    request, flash,
+    redirect,
+    url_for,
+    session
+)
 from werkzeug.utils import secure_filename
 from .brain import predict
 from .info import PRE_PATH, PROJECT_NAME, STATIC_DIR, VIEWS_DIR, UPLOAD_DIR
+from .util.fr import open_image
 
 site = Blueprint("site", PROJECT_NAME, template_folder=VIEWS_DIR)
 
@@ -38,35 +47,42 @@ def signup():
 @site.route("/analyzer", methods=['GET', 'POST'])
 def analyzer():
     ALLOWED_EXTS: Set[str] = {".png", ".jpg", ".jpeg"}
+
     def file_check(filename: str) -> bool:
         p = Path(filename)
         return p.suffix in ALLOWED_EXTS
     if request.method == "POST":
-        print(request)
-        print(request.files)
         if "myfile" not in request.files:
-            print("myfile not in request.files")
             flash("No file part.")
             return redirect(request.url)
         file = request.files["myfile"]
         if file.filename == "":
-            print("file.filename == ''")
             flash("No selected file.")
             return redirect(request.url)
         ok = file_check(file.filename)
-        print(file, ok)
-        if file and file_check(file.filename):
-            print("file and file_check(file.filename)")
+        if file and ok:
             filename = secure_filename(file.filename)
             end_path = UPLOAD_DIR / filename
             file.save(end_path)
-            emotion = predict(end_path)
-            print(f"PREDICTED_EMOTION: {emotion}")
-            return redirect(url_for("site.success"))
+            print("CHECKPOINT 1")
+            emotion = predict(open_image(end_path))
+            print("CHECKPOINT 2")
+            session["analyzer_emotion"] = emotion
+            os.remove(end_path)
+            return redirect(url_for("site.analyzer_success"))
         else:
             return redirect(request.url)
     elif request.method == "GET":
         return render_template("analyzer.html")
+
+
+@site.route("/analyzer/success", methods=["GET"])
+def analyzer_success():
+    if "analyzer_emotion" not in session:
+        return redirect(url_for("site.lostpage", lost="you-idiot"))
+    emotion = session["analyzer_emotion"]
+    session.pop("analyzer_emotion")
+    return render_template("analyzer-success.html", emotion=emotion)
 
 
 
