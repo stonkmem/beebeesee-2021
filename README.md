@@ -17,7 +17,7 @@ This application will be an indispensable tool for movie-makers *FACE*ing proble
 With **FACE**, they will be able to view thier audience's audiences reactions and will get essential information to improve thier movie production, using deep learning!
 
 ## To Run
-To run, please run `face-tkinter/facetk.py` using the python interpreter.
+To run, please run `face-tkinter/main.py` using the python interpreter.
 
 ```sh
 pip install -r requirements.txt
@@ -26,19 +26,19 @@ pip install -r requirements.txt
 ### Options
 
 ```sh
-python face-tkinter/facetk.py
+python face-tkinter/main.py
 ```
 
 or
 
 ```sh
-py face-tkinter/facetk.py
+py face-tkinter/main.py
 ```
 
 or
 
 ```sh
-/path/to/python/interpreter/python.exe face-tkinter/facetk.py
+/path/to/python/interpreter/python.exe face-tkinter/main.py
 ```
 
 
