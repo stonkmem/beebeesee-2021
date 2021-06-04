@@ -107,5 +107,9 @@ class SentimentalWebcam(Frame):
         self.main.after(10, self.play_img)
 
 
-if __name__ == "__main__":
+def main():
     SentimentalWebcam()
+
+
+if __name__ == "__main__":
+    main()

@@ -60,7 +60,8 @@ def analyzer():
             filename = secure_filename(file.filename)
             end_path = UPLOAD_DIR / filename
             file.save(end_path)
-            predict(end_path)
+            emotion = predict(end_path)
+            print(f"PREDICTED_EMOTION: {emotion}")
             return redirect(url_for("site.success"))
         else:
             return redirect(request.url)

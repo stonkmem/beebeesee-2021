@@ -23,8 +23,6 @@ tensorflowjs = "^3.6"
 cmake = "^3.20"
 dlib = "^19.8.1"
 pyopenssl = "^20.0"
-pyyaml = "^0.2"
-h5py = "^3.2"
 
 [tool.poetry.dev-dependencies]
 # black = "^21.0" # Commented out because poetry is utterly mindfucked
@@ -42,6 +40,7 @@ dist
 [tool.poetry.scripts]
 bbcs-debug = "beebeesee.cli:debug"
 bbcs-deploy = "beebeesee.cli:deploy"
+name-for-our-exe = "facetk:main"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
