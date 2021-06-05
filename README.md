@@ -84,6 +84,8 @@ The web client, developed with the Flask Web Framework, was developed as a proto
 
 <p align="center">
  <img src="assets/analyzer.png" />
+</p>
+<p align="center">
  Figure: Analyzer Page
 </p>
 
@@ -91,6 +93,8 @@ The web client, developed with the Flask Web Framework, was developed as a proto
 
 <p align="center">
  <img src="assets/classification.png" />
+</p>
+<p align="center">
  Figure: Classification Page
 </p>
 
@@ -98,6 +102,8 @@ The web client, developed with the Flask Web Framework, was developed as a proto
 
 <p align="center">
  <img src="assets/readme.png" />
+</p>
+<p align="center">
  Figure: README Page
 </p>
 
