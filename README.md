@@ -145,3 +145,8 @@ bash ./debug.sh
 ```shell
 ./debug.cmd
 ```
+
+## Remarks
+
+Ths was submitted for the BuildingBloCS 2021 AIWinpetititon and we won the Judges' Choice Award.
+
