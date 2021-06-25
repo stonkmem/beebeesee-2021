@@ -1,1 +1,0 @@
-pyinstaller --onefile facetk.py

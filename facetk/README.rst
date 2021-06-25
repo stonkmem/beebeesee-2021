@@ -1,1 +1,0 @@
-face - A Tkinter-based Facial Recognition based Sentimental Analysis Application that aims to predict emotions of users by accessing the Webcam using a Keras Model https://github.com/ThePyProgrammer/face-tkinter
